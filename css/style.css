@@ -1,7 +1,7 @@
 .container {
  	margin: 0 auto;
  	width: 100%;
- 	max-width: 960px;
+ 	max-width: 600px;
 }
 .row {
 	margin: 10px 0;
@@ -39,7 +39,7 @@ header {
 	border-top: 2px solid #888;
 	border-right: 2px solid #888;
 	box-sizing: border-box;
-	padding: 2.5% 5%;
+	padding: 5% 7.5% 10%;
 }
 .output {
 	border-bottom: 2px solid #888;
@@ -47,11 +47,11 @@ header {
 input {
 	border: 2px solid #888;
 	display: block;
-	font-size: 20px;
+	font-size: 16px;
 	margin: 0 auto;
-	padding: 3px;
+	padding: 3px 0;
 	text-align: center;
-	width: auto;
+	width: 150px;
 }
 .happy-face-cont {
 	border-left: 2px solid #888;
@@ -60,12 +60,12 @@ input {
 	box-sizing: border-box;
 	display: block;
 	float: left;
-	padding: 2.5% 1%;
-	width: 20%;
+	padding: 2.5%;
+	width: 25%;
 }
 .logo-cont {
 	float: left;
-	width: 80%;
+	width: 75%;
 }
 img#happy-face {
 	display: block;
@@ -80,12 +80,12 @@ img#logo {
 	width: 35%;
 }
 h1 {
-	font-size: 72px;
+	font-size: 48px;
 	margin: 10px 0;
 	text-align: center;
 }
 p {
-	font-size: 24px;
+	font-size: 18px;
 	line-height: 1.5;
 }
 
