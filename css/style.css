@@ -1,0 +1,92 @@
+.container {
+ 	margin: 0 auto;
+ 	width: 100%;
+ 	max-width: 960px;
+}
+.row {
+	margin: 10px 0;
+}
+.input-cont {
+	float: left;
+	width: 33%;
+}
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+.group:after {
+	clear: both;
+}
+.group {
+	clear: both;
+	*zoom: 1;
+}
+body {
+	/*font-family: "Comic sans";*/
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+header {
+	border-left: 2px solid #888;
+	border-top: 2px solid #888;
+	border-right: 2px solid #888;
+	box-sizing: border-box;
+}
+.input-fields,
+.output {
+	border-left: 2px solid #888;
+	border-top: 2px solid #888;
+	border-right: 2px solid #888;
+	box-sizing: border-box;
+	padding: 2.5% 5%;
+}
+.output {
+	border-bottom: 2px solid #888;
+}
+input {
+	border: 2px solid #888;
+	display: block;
+	font-size: 20px;
+	margin: 0 auto;
+	padding: 3px;
+	text-align: center;
+	width: auto;
+}
+.happy-face-cont {
+	border-left: 2px solid #888;
+	border-right: 4px solid #888;
+	border-top: 2px solid #888;
+	box-sizing: border-box;
+	display: block;
+	float: left;
+	padding: 2.5% 1%;
+	width: 20%;
+}
+.logo-cont {
+	float: left;
+	width: 80%;
+}
+img#happy-face {
+	display: block;
+	margin: 0 auto;
+	width: 75%;
+}
+img#logo {
+	display: block;
+	margin: 0 auto;
+	/*display: block;*/
+	/*float: left;*/
+	width: 35%;
+}
+h1 {
+	font-size: 72px;
+	margin: 10px 0;
+	text-align: center;
+}
+p {
+	font-size: 24px;
+	line-height: 1.5;
+}
+
+

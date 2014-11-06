@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="initial-scale=1">
+        <meta name="description" content="">
+		<title>ngMadLibs | Recreating Mad Libs with AngularJS</title>
+		<link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/normalize.min.css" rel="stylesheet" type="text/css" />
+		<link rel='stylesheet' href='css/grid-clearfix.css'>
+		<link rel='stylesheet' href='css/style.css'>
+	</head>
+	<body ng-app="">
+		<header class="container group">
+			<div class="happy-face-cont">
+				<img id="happy-face" src="img/happy-face.png">
+			</div>
+			<div class="logo-cont">
+				<img id="logo" src="img/logo.png">
+				<h1>Automate This!</h1>
+			</div>
+		</header>
+
+		<div class="main container">
+
+			<!-- BEGIN input fields -->
+			<div class="input-fields ">
+				<h2>Provide the following words:</h2>
+				<div class="row group">
+					<div class="input-cont">
+						<input ng-model="maleName" type="text" placeholder="male name">
+					</div>
+					<div class="input-cont">
+						<input ng-model="dirtyTask" type="text" placeholder="dirty task">
+					</div>
+					<div class="input-cont">
+						<input ng-model="obnoxiousCelebrity" type="text" placeholder="obnoxious celebrity">
+					</div>
+				</div>
+				<div class="row group">
+					<div class="input-cont">
+						<input ng-model="jobTitle" type="text" placeholder="job title">
+					</div>
+					<div class="input-cont">
+						<input ng-model="celebrity" type="text" placeholder="celebrity">
+					</div>
+					<div class="input-cont">
+						<input ng-model="hugeNumber" type="text" placeholder="huge number">
+					</div>
+				</div>
+				<div class="row group">
+					<div class="input-cont">
+						<input ng-model="tediousTask" type="text" placeholder="tedious task">
+					</div>
+					<div class="input-cont">
+						<input ng-model="uselessSkill" type="text" placeholder="useless skill">
+					</div>
+					<div class="input-cont">
+						<input ng-model="adjective" type="text" placeholder="adjective">
+					</div>
+				</div>
+				
+			</div>
+			<!-- END input fields -->
+
+			<!-- BEGIN output -->
+			<div class="output">
+				<p>
+					{{maleName}} was a {{jobTitle}} who loved technology. Although he loved parts of his job, he absolutely hated {{tediousTask}} and {{dirtyTask}}. So, {{maleName}} met with his life mentor {{celebrity}} who told him to learn how to {{uselessSkill}} with Thinkful. Thinkful didn't offer a course in {{uselessSkill}} so he studied programming instead.
+				</p>
+				<p>
+					What a great desicion! With his new skill, {{maleName}} built a(n) {{adjective}} robot named {{obnoxiousCelebrity}} that not only loved {{dirtyTask}} but did it {{hugeNumber}} times faster.
+				</p>
+			</div>
+			<!-- END output -->
+
+		</div>
+		
+
+
+
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
