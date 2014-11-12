@@ -33,6 +33,9 @@ header {
 	border-right: 2px solid #888;
 	box-sizing: border-box;
 }
+.under {
+	text-decoration: underline;
+}
 .input-fields,
 .output {
 	border-left: 2px solid #888;
