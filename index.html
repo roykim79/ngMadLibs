@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp">
 	<head>
 		<meta charset='utf-8'>
 		<meta name="viewport" content="initial-scale=1">
@@ -8,7 +8,7 @@
 		<link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/normalize.min.css" rel="stylesheet" type="text/css" />
 		<link rel='stylesheet' href='css/style.css'>
 	</head>
-	<body ng-app="">
+	<body ng-controller="MyCtrl">
 		<header class="container group">
 			<div class="happy-face-cont">
 				<img id="happy-face" src="img/happy-face.png">
@@ -73,11 +73,9 @@
 			<!-- END output -->
 
 		</div>
-		
 
-
-
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
-		<script src="js/main.js"></script>
+		<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>-->
+		<script src="js/angular.min.js"></script>
+		<script src="js/myApp.js"></script>
 	</body>
 </html>
