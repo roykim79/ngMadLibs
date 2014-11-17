@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp">
 	<head>
 		<meta charset='utf-8'>
 		<meta name="viewport" content="initial-scale=1">
@@ -8,7 +8,7 @@
 		<link href="http://cdnjs.cloudflare.com/ajax/libs/foundation/5.0.3/css/normalize.min.css" rel="stylesheet" type="text/css" />
 		<link rel='stylesheet' href='css/style.css'>
 	</head>
-	<body ng-app="">
+	<body ng-controller="MyCtrl">
 		<header class="container group">
 			<div class="happy-face-cont">
 				<img id="happy-face" src="img/happy-face.png">
@@ -18,66 +18,102 @@
 				<h1>Automate This!</h1>
 			</div>
 		</header>
-
 		<div class="main container">
-
 			<!-- BEGIN input fields -->
-			<div class="input-fields ">
-				<h2>Provide the following words:</h2>
-				<div class="row group">
-					<div class="input-cont">
-						<input ng-model="maleName" type="text" placeholder="male name">
+			<div class="input-fields" ng-hide="submitted && myForm.$valid">
+				<form name="myForm" ng-submit="submit()">
+					<h2>Provide the following words:</h2>
+					<div class="row group">
+						<div class="input-cont">
+							<input type="text" 
+								name="maleName"
+								placeholder="male name"
+								ng-model="maleName"
+								required>
+						</div>
+						<div class="input-cont">
+							<input type="text"
+								name="dirtyTask"
+								placeholder="dirty task" 
+								ng-model="dirtyTask" 
+								required>
+						</div>
+						<div class="input-cont">
+							<input type="text" 
+								name="obnoxiousCelebrity"
+								placeholder="obnoxious celebrity" 
+								ng-model="obnoxiousCelebrity" 
+								required>
+						</div>
 					</div>
-					<div class="input-cont">
-						<input ng-model="dirtyTask" type="text" placeholder="dirty task">
+					<div class="row group">
+						<div class="input-cont">
+							<input type="text" 
+								name="jobTitle"
+								placeholder="job title" 
+								ng-model="jobTitle"
+								required>
+						</div>
+						<div class="input-cont">
+							<input type="text" 
+								name="celebrity"
+								placeholder="celebrity" 
+								ng-model="celebrity" 
+								required>
+						</div>
+						<div class="input-cont">
+							<input type="number"
+								name="hugeNumber"
+								placeholder="huge number" 
+								ng-model="hugeNumber" 
+								required>
+						</div>
 					</div>
-					<div class="input-cont">
-						<input ng-model="obnoxiousCelebrity" type="text" placeholder="obnoxious celebrity">
+					<div class="row group">
+						<div class="input-cont">
+							<input type="text"
+								name="tediousTask"
+								placeholder="tedious task" 
+								ng-model="tediousTask"
+								required>
+						</div>
+						<div class="input-cont">
+							<input type="text"
+								name="uselessSkill"
+								placeholder="useless skill"
+								ng-model="uselessSkill"
+								required>
+						</div>
+						<div class="input-cont">
+							<input type="text"
+								name="adjective"
+								placeholder="adjective"
+								ng-model="adjective"
+								required>
+						</div>
 					</div>
-				</div>
-				<div class="row group">
-					<div class="input-cont">
-						<input ng-model="jobTitle" type="text" placeholder="job title">
+					<div class="submit-cont group">
+						<button class="right" value="submit">Generate my Mad Libs</button>
 					</div>
-					<div class="input-cont">
-						<input ng-model="celebrity" type="text" placeholder="celebrity">
-					</div>
-					<div class="input-cont">
-						<input ng-model="hugeNumber" type="text" placeholder="huge number">
-					</div>
-				</div>
-				<div class="row group">
-					<div class="input-cont">
-						<input ng-model="tediousTask" type="text" placeholder="tedious task">
-					</div>
-					<div class="input-cont">
-						<input ng-model="uselessSkill" type="text" placeholder="useless skill">
-					</div>
-					<div class="input-cont">
-						<input ng-model="adjective" type="text" placeholder="adjective">
-					</div>
-				</div>
-				
+				</form>
 			</div>
 			<!-- END input fields -->
-
 			<!-- BEGIN output -->
-			<div class="output">
+			<div class="output" ng-if="submitted && myForm.$valid">
 				<p>
 					<span class="under" ng-if="!maleName"><span ng-non-bindable>{{male name}}</span></span><span class="under">{{maleName}}</span> was a <span class="under" ng-if="!jobTitle"><span ng-non-bindable>{{job title}}</span></span><span class="under">{{jobTitle}}</span> who loved technology. Although he loved parts of his job, he absolutely hated <span class="under" ng-if="!tediousTask"><span ng-non-bindable>{{tedious task}}</span></span><span class="under">{{tediousTask}}</span> and <span class="under" ng-if="!dirtyTask"><span ng-non-bindable>{{dirty task}}</span></span><span class="under">{{dirtyTask}}</span>. So, <span class="under" ng-if="!maleName"><span ng-non-bindable>{{male name}}</span></span><span class="under">{{maleName}}</span> met with his life mentor <span class="under" ng-if="!celebrity"><span ng-non-bindable>{{celebrity}}</span></span><span class="under">{{celebrity}}</span> who told him to learn how to <span class="under" ng-if="!uselessSkill"><span ng-non-bindable>{{useless skill}}</span></span><span class="under">{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course in <span class="under" ng-if="!uselessSkill"><span ng-non-bindable>{{usless skill}}</span></span><span class="under">{{uselessSkill}}</span> so he studied programming instead.
 				</p>
 				<p>
-					What a great desicion! With his new skill, <span class="under" ng-if="!maleName"><span ng-non-bindable>{{male name}}</span></span><span class="under">{{maleName}}</span> built a(n) <span class="under" ng-if="!adjective"><span ng-non-bindable>{{adjective}}</span></span><span class="under">{{adjective}}</span> robot named <span class="under" ng-if="!obnoxiousCelebrity"><span ng-non-bindable>{{obnoxious celebtrity}}</span></span><span class="under">{{obnoxiousCelebrity}}</span> that not only loved <span class="under" ng-if="!dirtyTask"><span ng-non-bindable>{{dirty task}}</span></span><span class="under">{{dirtyTask}}</span> but did it <span class="under" ng-if="!hugeNumber"><span ng-non-bindable>{{huge number}}</span></span><span class="under">{{hugeNumber}}</span> times faster.
+					What a great decision! With his new skill, <span class="under" ng-if="!maleName"><span ng-non-bindable>{{male name}}</span></span><span class="under">{{maleName}}</span> built a(n) <span class="under" ng-if="!adjective"><span ng-non-bindable>{{adjective}}</span></span><span class="under">{{adjective}}</span> robot named <span class="under" ng-if="!obnoxiousCelebrity"><span ng-non-bindable>{{obnoxious celebtrity}}</span></span><span class="under">{{obnoxiousCelebrity}}</span> that not only loved <span class="under" ng-if="!dirtyTask"><span ng-non-bindable>{{dirty task}}</span></span><span class="under">{{dirtyTask}}</span> but did it <span class="under" ng-if="!hugeNumber"><span ng-non-bindable>{{huge number}}</span></span><span class="under">{{hugeNumber}}</span> times faster.
 				</p>
+				<button class="right" ng-click="startOver()">Start Over</button>
 			</div>
 			<!-- END output -->
 
 		</div>
-		
 
-
-
-		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>
-		<script src="js/main.js"></script>
+		<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js"></script>-->
+		<script src="js/angular.min.js"></script>
+		<script src="js/myApp.js"></script>
 	</body>
 </html>

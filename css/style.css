@@ -6,6 +6,9 @@
 .row {
 	margin: 10px 0;
 }
+.row:last-child {
+	border-bottom: 2px solid #888;	
+}
 .input-cont {
 	float: left;
 	width: 33%;
@@ -22,10 +25,29 @@
 	clear: both;
 	*zoom: 1;
 }
+/*UTILITY*/
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.under {
+	text-decoration: underline;
+}
+
 body {
-	/*font-family: "Comic sans";*/
 	margin-bottom: 20px;
 	margin-top: 20px;
+}
+h1 {
+	font-size: 48px;
+	margin: 10px 0;
+	text-align: center;
+}
+p {
+	font-size: 18px;
+	line-height: 1.5;
 }
 header {
 	border-left: 2px solid #888;
@@ -33,9 +55,8 @@ header {
 	border-right: 2px solid #888;
 	box-sizing: border-box;
 }
-.under {
-	text-decoration: underline;
-}
+
+
 .input-fields,
 .output {
 	border-left: 2px solid #888;
@@ -44,8 +65,14 @@ header {
 	box-sizing: border-box;
 	padding: 2.5% 7.5% 10%;
 }
-.output {
+.container {
 	border-bottom: 2px solid #888;
+}
+button {
+	background: #fff;
+	border: 2px solid #888;
+	box-shadow: 2px 2px 2px #888;
+	margin-top: 20px;
 }
 input {
 	border: 2px solid #888;
@@ -70,6 +97,10 @@ input {
 	float: left;
 	width: 75%;
 }
+.submit-cont {
+	border-top: 2px solid #333;
+	margin-top: 20px;
+}
 img#happy-face {
 	display: block;
 	margin: 0 auto;
@@ -78,18 +109,8 @@ img#happy-face {
 img#logo {
 	display: block;
 	margin: 0 auto;
-	/*display: block;*/
-	/*float: left;*/
 	width: 35%;
 }
-h1 {
-	font-size: 48px;
-	margin: 10px 0;
-	text-align: center;
-}
-p {
-	font-size: 18px;
-	line-height: 1.5;
-}
+
 
 
